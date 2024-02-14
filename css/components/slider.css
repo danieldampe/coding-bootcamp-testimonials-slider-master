@@ -1,0 +1,140 @@
+/* 
+// *** *** *** Slider / Component *** *** ***
+*/
+.slider {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+/* 
+// *** *** *** Text *** *** ***
+*/
+.slider-txt { 
+    padding: 2rem;
+    text-align: center; 
+    background-image: url(../../images/pattern-quotes.svg);
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position: 50% 0%;
+}
+
+.slider-txt__quote {  
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.slider-txt__user {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.9rem;
+}
+
+.slider-txt-user__name {
+    font-weight: bold;
+    color: var(--color-dark-blue);
+}
+
+.slider-txt-user__label { color: var(--color-grayish-blue); }
+
+/* 
+// *** *** *** Main *** *** ***
+*/
+.slider-main {
+    padding: 3rem;
+    background-image: url(../../images/pattern-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* 
+// *** *** *** Slider *** *** ***
+*/
+.slider-main__slider { 
+    position: relative; 
+    max-width: 540px;
+    margin-inline: auto;
+}
+
+.slider-main-slider__inner { 
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.slider-main-slider-inner__sliders {
+    display: flex; 
+    transition: transform 0.5s ease;
+}
+
+/* 
+// *** *** *** Controls *** *** ***
+*/
+.slider-controls {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    display: flex;
+    border-radius: 25px;
+    background-color: var(--color-white);
+}
+
+.slider-controls__btn { padding: 1rem; }
+
+.slider-controls-btn__icon { width: 0.6rem; }
+
+@media screen and (min-width: 1000px) {
+    /* 
+    // *** *** *** Slider / Component *** *** ***
+    */
+    .slider {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* 
+    // *** *** *** Text *** *** ***
+    */
+    .slider-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 50%;
+        height: fit-content;
+        padding-right: 0;
+        text-align: left;
+        background-position: 30% 0;
+    }
+
+    .slider-txt__quote {
+        position: relative;
+        z-index: 100;
+        width: 125%;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    .slider-txt__user {
+        flex-direction: row;
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    /* 
+    // *** *** *** Main *** *** ***
+    */
+    .slider-main { width: 50%; }
+
+    /* 
+    // *** *** *** Controls *** *** ***
+    */
+    .slider-controls {
+        left: 15%;
+        transform: translateY(50%);
+    }
+}
